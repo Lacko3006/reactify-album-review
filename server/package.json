@@ -4,7 +4,8 @@
   "description": "server file",
   "main": "server.js",
   "scripts": {
-    "watch": "node server.js"
+    "start": "node server.js",
+    "watch": "nodemon"
   },
   "repository": {
     "type": "git",
