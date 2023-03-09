@@ -1,4 +1,4 @@
-const { Profile } = require('../models');
+// const { Profile } = require('../models');
 const { signToken } = require('../utils/auth.js');
 
 const resolvers = {
