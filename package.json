@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Lacko3006/reactify-album-review#readme",
   "dependencies": {
-    "concurrently": "^7.6.0"
+    "concurrently": "^7.6.0",
+    "dotenv": "^16.0.3"
   }
 }
