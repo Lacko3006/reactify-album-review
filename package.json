@@ -4,7 +4,7 @@
   "description": "album review website3",
   "main": "index.js",
   "scripts": {
-    "start": "node server/server.js",
+    "start": "cd server && npm start",
     "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
     "install": "cd server && npm i && cd ../client && npm i",
     "seed": "cd server && npm run seed",
@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Lacko3006/reactify-album-review#readme",
   "dependencies": {
-    "concurrently": "^7.6.0"
+    "concurrently": "^7.6.0",
+    "dotenv": "^16.0.3"
   }
 }
