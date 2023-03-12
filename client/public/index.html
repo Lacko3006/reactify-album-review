@@ -1,43 +1,104 @@
-<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
-      Notice the use of %PUBLIC_URL% in the tags above.
-      It will be replaced with the URL of the `public` folder during the build.
-      Only files inside the `public` folder can be referenced from the HTML.
-
-      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
-      work correctly both with client-side routing and a non-root public URL.
-      Learn how to configure a non-root public URL by running `npm run build`.
-    -->
-    <title>React App</title>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script> -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;1,100&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <title>RhythmRater</title>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <a href="/">
+    <div class="sidebarz">
+      <div class="logo">
+        <marquee behavior="alternate" scrollamount="2">
+          <marquee behavior="alternate" scrollamount="2" direction="down">
+            <img src={"../src/images/rr-logo.jpg"}alt="Rhythm-Review-Logo"/>
+          </marquee>
+        </marquee>
+      </div>
+</a>
+      <div class="navz">
+        <ul>
+          <li>
+            <a href="/">
+              <span class="fa fa-home"></span>
+              <span>Home</span>
+            </a>
+          </li>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
+          <li>
+            <a href="#">
+              <span class="fa fa-search"></span>
+              <span>Search</span>
+            </a>
+          </li>
 
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
+          <li>
+            <a href="#">
+              <span class="fa fas fa-book"></span>
+              <span>Your Libary</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="navz">
+        <ul>
+          <li>
+            <a href="/artist">
+              <span class="fa fas fa-plus-square"></span>
+              <span>Artist</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="/album">
+              <span class="fa fas fa-heart"></span>
+              <span>Albums</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="main-container">
+    <div class="topbar">
+        <div class="prev-next-button">
+            <button type="button" class="fa fas fa-chevron-left"></button>
+            <button type="button" class="fa fas fa-chevron-right"></button>
+        </div>
+
+        <div class="topnav">
+            <ul>
+                <li>
+                   <a href="/login">Sign Up</a>
+                </li>
+                
+                <li class="divider">|</li> 
+            </ul>
+            <button type="button"><a href="/login">Log In</a></button>
+        </div>
+    </div>
+  </div>
+    <section id="root" class="homepage">
+    </section>
+    <scrip
+      src="../src/components/Homepage.js"
+      src="https://kit.fontawesome.com/2d7badc3e2.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
