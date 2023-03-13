@@ -3,7 +3,8 @@ import "../index.css";
 
 
 export default function Login() {
-  return ( <section class="wrapper">
+  return (
+    <section class="wrapper">
       <div className="form signup">
         <header>Signup</header>
         <form action="#">
@@ -28,6 +29,5 @@ export default function Login() {
         </form>
       </div>
     </section>
-
   )
 }
