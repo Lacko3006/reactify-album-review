@@ -1,11 +1,13 @@
 import React from "react";
 import "../index.css";
 import logo from "../images/rr-logo.jpg";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   return (
     <div>
       <div className="sidebarz">
+        <Link to="/">
         <div className="logo">
           <marquee behavior="alternate" scrollamount="2">
             <marquee behavior="alternate" scrollamount="2" direction="down">
@@ -13,13 +15,14 @@ export default function Navbar() {
             </marquee>
           </marquee>
         </div>
+        </Link>
         <div className="navz">
           <ul>
             <li>
-              <a href="/">
+              <Link to="/">
                 <span className="fa fa-home"></span>
                 <span>Home</span>
-              </a>
+              </Link>
             </li>
 
             <li>
@@ -47,10 +50,10 @@ export default function Navbar() {
             </li>
 
             <li>
-              <a href="/album">
+              <Link to="/album">
                 <span className="fa fas fa-heart"></span>
                 <span>Albums</span>
-              </a>
+              </Link>
             </li>
           </ul>
         </div>

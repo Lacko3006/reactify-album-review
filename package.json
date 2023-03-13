@@ -23,8 +23,5 @@
   "dependencies": {
     "concurrently": "^7.6.0",
     "dotenv": "^16.0.3"
-  },
-  "devDependencies": {
-    "webpack": "^5.76.1"
   }
 }
