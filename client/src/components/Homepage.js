@@ -1,9 +1,13 @@
 import React from "react";
 import "../index.css";
 
+let styles = {
+    marginLeft: "196px",
+}
+
 export default function Homepage() {
   return (
-    <div>
+    <div  style={styles}>
       <section id="hero">
         <div className="container">
           <div className="info">
