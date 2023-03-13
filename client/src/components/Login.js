@@ -18,12 +18,17 @@ export default function Login() {
   const passwordChange = e => {
     setPassword(e.target.value)
   }
+  
+  const signUp = e => {
+    e.preventDefault()
+    console.log(username, email, password)
+  }
 
   return (
     <section className="wrapper">
       <div className="form signup">
         <header>Signup</header>
-        <form action="#">
+        <form onSubmit={signUp}>
           <input id="name-signup" type="text" placeholder="username" value={username} onChange={usernameChange} />
           <input id="email-signup" type="email" placeholder="email" value={email} onChange={emailChange} />
           <input id="password-signup" type="password" placeholder="password" value={password} onChange={passwordChange} />
