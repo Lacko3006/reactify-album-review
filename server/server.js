@@ -14,7 +14,6 @@ const { authMiddleware } = require('./utils/auth');
 const app = express();
 const httpServer = http.createServer(app);
 
-
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 

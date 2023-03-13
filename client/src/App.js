@@ -5,20 +5,28 @@ import Navbar from "./components/Navbar";
 import Albums from "./components/Albums"
 import Login from "./components/Login";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
+
+const client = new ApolloClient({
+  uri: '/graphql',
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
-    <BrowserRouter>
-      <div>
-        <Sidebar />
-        <Navbar />
-      </div>
-      <Routes>
-        <Route path="/" element={<Homepage />}></Route>
-        <Route path="/album" element={<Albums />}></Route>
-        <Route path="/login" element={<Login />}></Route>
-      </Routes>
-    </BrowserRouter>
+    <ApolloProvider client={client}>
+      <BrowserRouter>
+        <div>
+          <Sidebar />
+          <Navbar />
+        </div>
+        <Routes>
+          <Route path="/" element={<Homepage />}></Route>
+          <Route path="/album" element={<Albums />}></Route>
+          <Route path="/login" element={<Login />}></Route>
+        </Routes>
+      </BrowserRouter>
+    </ApolloProvider>
   );
 }
 
