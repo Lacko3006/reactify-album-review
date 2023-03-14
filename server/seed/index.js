@@ -1,7 +1,7 @@
 const albumSeed = require('./albumSeed')
 const artistSeed = require('./artistSeed')
 
-(async () => {
+module.exports = async () => {
   await artistSeed()
   await albumSeed()
-})()
+}

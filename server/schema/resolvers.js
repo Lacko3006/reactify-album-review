@@ -1,5 +1,6 @@
 const { Profile } = require('../models');
 const { signToken } = require('../utils/auth.js');
+const seed = require('../seed')
 
 const resolvers = {
   Query: {
@@ -33,6 +34,7 @@ const resolvers = {
       return { token }
     },
     seed: async () => {
+      await seed()
       console.log('Hello')
     }
   },
