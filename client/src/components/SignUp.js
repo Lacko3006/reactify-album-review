@@ -9,6 +9,7 @@ export default function SignUp() {
   const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
   const [addUser] = useMutation(ADD_USER);
 
   const usernameChange = e => {
@@ -31,6 +32,8 @@ export default function SignUp() {
       }
     }).then(it => {
       auth.login(it.data.addUser.token)
+    }).catch(it => {
+      setError(it.message)
     })
   }
 
@@ -47,6 +50,7 @@ export default function SignUp() {
             <label htmlFor="signupCheck">I accept all terms & conditions</label>
           </div>
           <input className="signup-form" type="submit" value="Signup" />
+          {error ? <p>{error}</p> : ''}
         </form>
       </div>
     </section>

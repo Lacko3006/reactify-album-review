@@ -7,6 +7,7 @@ import auth from '../authentication/auth'
 export default function Login() {
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+  const [error, setError] = useState('')
   const [login] = useLazyQuery(LOGIN);
 
   const usernameChange = e => {
@@ -16,7 +17,7 @@ export default function Login() {
   const passwordChange = e => {
     setPassword(e.target.value)
   }
-  
+
   const onSubmit = (e) => {
     e.preventDefault();
     login({
@@ -24,7 +25,11 @@ export default function Login() {
         username, password
       }
     }).then(it => {
-      auth.login(it.data.login.token)
+      if (it.error) {
+        setError('Login details wrong')
+      } else {
+        auth.login(it.data.login.token)
+      }
     })
   }
 
@@ -36,6 +41,7 @@ export default function Login() {
           <input id="name-signup" type="text" placeholder="username" value={username} onChange={usernameChange} />
           <input id="password-signup" type="password" placeholder="password" value={password} onChange={passwordChange} />
           <input className="login-form" type="submit" value="Login" />
+          {error ? <p>{error}</p> : ''}
         </form>
       </div>
     </section>
