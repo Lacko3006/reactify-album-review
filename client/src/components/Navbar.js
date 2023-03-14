@@ -14,7 +14,7 @@ export default function Navbar() {
         <div className="topnav">
           <ul>
             <li>
-              <Link to="/login">Sign Up</Link>
+              <Link to="/signup">Sign Up</Link>
             </li>
 
             <li className="divider">|</li>
