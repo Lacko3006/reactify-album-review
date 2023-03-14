@@ -1,6 +1,7 @@
 import React from "react";
 import "../index.css";
 import { Link } from "react-router-dom";
+import auth from "../authentication/auth";
 
 export default function Navbar() {
   return (
@@ -12,16 +13,26 @@ export default function Navbar() {
         </div>
 
         <div className="topnav">
-          <ul>
-            <li>
-              <Link to="/signup">Sign Up</Link>
-            </li>
+          {!auth.loggedIn() ? (
+            <>
+              <ul>
+                <li>
+                  <Link to="/signup">Sign Up</Link>
+                </li>
 
-            <li className="divider">|</li>
-          </ul>
-          <button type="button">
-          <Link to="/login">Log In</Link>
-          </button>
+                <li className="divider">|</li>
+              </ul>
+              <button type="button">
+                <Link to="/login">Log In</Link>
+              </button>
+            </>
+          ) : (
+            <>
+              <p>Hi {auth.getProfile().data.username}</p>
+              <button type="button" onClick={auth.logout}>Log Out</button>
+            </>
+          )
+          }
         </div>
       </div>
     </div>
