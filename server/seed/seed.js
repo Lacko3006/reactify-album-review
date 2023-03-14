@@ -1,2 +1,7 @@
 const albumSeed = require('./albumSeed')
-const 
+const artistSeed = require('./artistSeed')
+
+(async () => {
+  await artistSeed()
+  await albumSeed()
+})()
