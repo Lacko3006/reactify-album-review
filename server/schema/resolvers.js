@@ -32,6 +32,9 @@ const resolvers = {
       const token = signToken(user);
       return { token }
     },
+    seed: async () => {
+      console.log('Hello')
+    }
   },
 };
 
