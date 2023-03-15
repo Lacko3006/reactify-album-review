@@ -35,7 +35,6 @@ const resolvers = {
     },
     seed: async () => {
       await seed()
-      console.log('Hello')
     }
   },
 };
