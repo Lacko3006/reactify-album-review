@@ -1,6 +1,6 @@
 const { Profile } = require('../models');
 const { signToken } = require('../utils/auth.js');
-const seed = require('../seed')
+const seed = require('../seedData')
 
 const resolvers = {
   Query: {
