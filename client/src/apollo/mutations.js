@@ -7,3 +7,9 @@ mutation AddUser($username: String!, $email: String!, $password: String!) {
   }
 }
 `
+
+export const SEED = gql`
+mutation Mutation {
+  seed
+}
+`
