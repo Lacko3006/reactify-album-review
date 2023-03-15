@@ -31,10 +31,15 @@ module.exports = async () => {
         albums: albumReferences,
       }
     })
-  const artistsToCreate = await Promise.all(artistPromises)
+  const artistsWithAlbums = await Promise.all(artistPromises)
+  const artistNamesWithAlbums = artistsWithAlbums.map(it => it.name)
+  const artistsWithoutAlbums = artists
+    .filter(it => !artistNamesWithAlbums.includes(it))
+    .map(name => ({ name }))
   console.log('Albums created')
 
   console.log('Creating artists')
-  await Artist.create(artistsToCreate)
+  await Artist.create(artistsWithAlbums)
+  await Artist.create(artistsWithoutAlbums)
   console.log('Artists created')
 }
