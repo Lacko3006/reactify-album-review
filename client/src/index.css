@@ -278,6 +278,7 @@ section .album h1 {
 
 .album {
   padding: 20px;
+  margin-left: 196px
 }
 
 .album-details {

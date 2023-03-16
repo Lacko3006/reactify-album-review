@@ -7,3 +7,15 @@ query Login($username: String!, $password: String!) {
   }
 }
 `
+
+export const GET_ALBUMS = gql`
+query GetAlbums {
+  getAlbums {
+    _id
+    genre
+    name
+    songs
+    year
+  }
+}
+`

@@ -1,4 +1,4 @@
-const { Profile } = require('../models');
+const { Profile, Album } = require('../models');
 const { signToken } = require('../utils/auth.js');
 const seed = require('../seedData')
 
@@ -22,7 +22,13 @@ const resolvers = {
 
       const token = signToken(profile);
       return { token };
+    },
+
+    getAlbums: async () => {
+      const albums = await Album.find();
+      return albums;
     }
+
   },
 
   Mutation: {
