@@ -8,6 +8,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ApolloClient, InMemoryCache, ApolloProvider, gql } from '@apollo/client';
 import SignUp from "./components/SignUp";
 import Seed from "./components/Seed";
+import Artists from "./components/Artists";
 
 const client = new ApolloClient({
   uri: '/graphql',
@@ -25,6 +26,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Homepage />}></Route>
           <Route path="/album" element={<Albums />}></Route>
+          <Route path="/artist" element={<Artists />}></Route>
           <Route path="/signup" element={<SignUp />}></Route>
           <Route path="/login" element={<Login />}></Route>
           <Route path="/seed" element={<Seed />}></Route>

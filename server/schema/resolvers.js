@@ -1,4 +1,4 @@
-const { Profile, Album } = require('../models');
+const { Profile, Album, Artist } = require('../models');
 const { signToken } = require('../utils/auth.js');
 const seed = require('../seedData')
 
@@ -27,6 +27,11 @@ const resolvers = {
     getAlbums: async () => {
       const albums = await Album.find();
       return albums;
+    },
+
+    getArtists: async () => {
+      const artists = await Artist.find();
+      return artists;
     }
 
   },

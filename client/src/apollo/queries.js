@@ -19,3 +19,12 @@ query GetAlbums {
   }
 }
 `
+
+export const GET_ARTISTS = gql`
+query GetArtists {
+  getArtists {
+    _id
+    name
+  }
+}
+`
