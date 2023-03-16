@@ -43,10 +43,10 @@ export default function Navbar() {
         <div className="navz">
           <ul>
             <li>
-              <a href="/artist">
+              <Link to={"/artist"}>
                 <span className="fa fas fa-plus-square"></span>
                 <span>Artist</span>
-              </a>
+              </Link>
             </li>
 
             <li>
