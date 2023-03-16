@@ -17,10 +17,7 @@ const httpServer = http.createServer(app);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-// if we're in production, serve client/build as static assets
-if (process.env.NODE_ENV === 'production') {
-  app.use(express.static(path.join(__dirname, '../client/build')));
-}
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 const { typeDefs, resolvers } = require('./schema');
 const db = require('./config/connection');
@@ -41,6 +38,9 @@ const server = new ApolloServer({
       constext: authMiddleware
     })
   );
+  app.get('*', (_, res) => {
+    res.sendFile(path.join(__dirname, '../client/build/index.html'))
+  })
   await new Promise((resolve) => httpServer.listen({ port }, resolve));
   db.once('open', async () => {
     console.log(`Server ready at http://localhost:${port}/graphql`);
