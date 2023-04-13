@@ -38,8 +38,8 @@ export default function Login() {
       <div className="form signup">
         <header>Login</header>
         <form onSubmit={onSubmit}>
-          <input id="name-signup" type="text" placeholder="username" value={username} onChange={usernameChange} />
-          <input id="password-signup" type="password" placeholder="password" value={password} onChange={passwordChange} />
+          <input id="name-signup" type="text" placeholder="Enter Username" value={username} onChange={usernameChange} />
+          <input id="password-signup" type="password" placeholder="Enter Password" value={password} onChange={passwordChange} />
           <input className="login-form" type="submit" value="Login" />
           {error ? <p>{error}</p> : ''}
         </form>

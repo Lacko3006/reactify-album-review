@@ -42,9 +42,9 @@ export default function SignUp() {
       <div className="form signup">
         <header>Signup</header>
         <form onSubmit={onSubmit}>
-          <input id="name-signup" type="text" placeholder="username" value={username} onChange={usernameChange} />
-          <input id="email-signup" type="email" placeholder="email" value={email} onChange={emailChange} />
-          <input id="password-signup" type="password" placeholder="password" value={password} onChange={passwordChange} />
+          <input id="name-signup" type="text" placeholder="Enter Username" value={username} onChange={usernameChange} />
+          <input id="email-signup" type="email" placeholder="Enter Email" value={email} onChange={emailChange} />
+          <input id="password-signup" type="password" placeholder="Enter Password" value={password} onChange={passwordChange} />
           <div className="checkbox">
             <input type="checkbox" id="signupCheck" />
             <label htmlFor="signupCheck">I accept all terms & conditions</label>
