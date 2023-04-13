@@ -14,13 +14,23 @@ Our user story is based around the empty space surrounding music social media,we
 
 ## Technology 
 
+
 - HTML
 - CSS
 - JavaScript
 - React
-- MongoDB
-- Apollo
+- Node
 - GraphQL
+- Mongo DB and Mongoose OD
+- Heroku
+- Stripe 
+- NPM packages such as - apollo/server:
+Bcrypt
+Dotenv
+Express
+Graphql
+Graphql-tag
+jsonwebtoken
 
 
 ## Installation and Usage
