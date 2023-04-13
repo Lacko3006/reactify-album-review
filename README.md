@@ -14,7 +14,6 @@ Our user story is based around the empty space surrounding music social media,we
 
 ## Technology 
 
-
 - HTML
 - CSS
 - JavaScript
