@@ -40,14 +40,14 @@ export default function SignUp() {
   return (
     <section className="wrapper">
       <div className="form signup">
-        <header>Signup</header>
+        <header>Sign Up</header>
         <form onSubmit={onSubmit}>
           <input id="name-signup" type="text" placeholder="Enter Username" value={username} onChange={usernameChange} />
           <input id="email-signup" type="email" placeholder="Enter Email" value={email} onChange={emailChange} />
           <input id="password-signup" type="password" placeholder="Enter Password" value={password} onChange={passwordChange} />
           <div className="checkbox">
             <input type="checkbox" id="signupCheck" />
-            <label htmlFor="signupCheck">I accept all terms & conditions</label>
+            <label htmlFor="signupCheck">I accept all the terms & conditions</label>
           </div>
           <input className="signup-form" type="submit" value="Signup" />
           {error ? <p>{error}</p> : ''}
