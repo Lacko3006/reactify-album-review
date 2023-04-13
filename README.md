@@ -1,6 +1,6 @@
 # Reactify Album Review
 
-## Table of contents 
+## Table of Contents 
 
  - [Description](#description)
  - [Technology](#technology)
