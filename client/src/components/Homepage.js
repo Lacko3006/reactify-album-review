@@ -11,8 +11,8 @@ export default function Homepage() {
       <section id="hero">
         <div className="container">
           <div className="info">
-            <h1>Welcome to RhythmReview</h1>
-            <h2>Using Rythem Raters</h2>
+            <h1>Welcome to Rhythm Review</h1>
+            <h2>Using Rythym Raters</h2>
             <p>
               Rythym Raters mission is to unlock the potential of human
               creativity by giving millions of creative artists the opportunity to
